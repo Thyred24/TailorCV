@@ -226,12 +226,6 @@ const rows: Row[] = [
                 if (item.label === "Interviews") {
                   router.push("/dashboard/interviews");
                 }
-                if (item.label === "Settings") {
-                  router.push("/dashboard/settings");
-                }
-                if (item.label === "Logout") {
-                  router.push("/");
-                }
               }}
             >
               <IconButton 
@@ -261,6 +255,14 @@ const rows: Row[] = [
               _hover={{
                 cursor: "pointer",
                 bg: item.label === "Logout" ? "linear-gradient(to left, rgba(255, 0, 0, 0.5) 0%, transparent 100%)" : "rgba(99, 102, 241, 0.1)",
+              }}
+              onClick={() => {
+                if (item.label === "Settings") {
+                  router.push("/dashboard/settings");
+                }
+                if (item.label === "Logout") {
+                  router.push("/");
+                }
               }}
             >
               <IconButton bg="transparent" aria-label="icon" cursor="pointer" color={colors.secondaryText}>

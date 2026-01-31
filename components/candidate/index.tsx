@@ -1281,12 +1281,6 @@ export default function Candidate() {
                         if (item.label === "Interviews") {
                             router.push("/dashboard/interviews");
                         }
-                        if (item.label === "Settings") {
-                            router.push("/dashboard/settings");
-                        }
-                        if (item.label === "Logout") {
-                            router.push("/");
-                        }
                     }} 
               >
                 <IconButton aria-label={item.label} bg="transparent" color={isActive ? colors.primary : colors.secondaryText}>
@@ -1319,6 +1313,14 @@ export default function Candidate() {
                   item.label === "Logout"
                     ? "linear-gradient(to left, rgba(255, 0, 0, 0.5) 0%, transparent 100%)"
                     : "rgba(99, 102, 241, 0.1)",
+              }}
+              onClick={() => {
+                if (item.label === "Settings") {
+                  router.push("/dashboard/settings");
+                }
+                if (item.label === "Logout") {
+                  router.push("/");
+                }
               }}
             >
               <IconButton aria-label={item.label} bg="transparent" color={colors.secondaryText}>

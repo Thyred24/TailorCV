@@ -407,6 +407,7 @@ export default function Pipeline() {
     if (label === "Pipeline") router.push("/dashboard/pipeline")
     if (label === "Interviews") router.push("/dashboard/interviews")
     if (label === "Settings") router.push("/dashboard/settings")
+    if (label === "Logout") router.push("/")
   }
 
   const tabStyle = (active: boolean) => {
